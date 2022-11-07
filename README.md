@@ -10,7 +10,7 @@ Now clone this repo, use `git clone https://github.com/Animesh-456/NodeJS-CRUD-R
 
 Now use `npm install` to install all the required dependencies.
 
-To start the app (in dev environment) use `npm run devStart` or you can use `npm run start` too.
+To start the app (in dev environment) use `npm run dev`.
 
 Now open your browser of choice on your local machine and navigate to `localhost:3000/api-docs`
 
