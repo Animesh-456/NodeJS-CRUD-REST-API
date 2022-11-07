@@ -63,5 +63,17 @@ router.post("/adddesc", (req: Request, res: Response) => {
     })
 })
 
+router.delete("/todo/:id", (req: Request, res: Response) => {
+    //console.log(req.params.id)
+    const email = req.params.id
+    Todo.updateOne({ email: email }, { $pop: { description: 1 } }, (err: any) => {
+        if (!err) {
+            res.sendStatus(200)
+        } else {
+            res.sendStatus(404)
+        }
+    })
+})
+
 
 module.exports = router;

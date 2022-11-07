@@ -63,6 +63,38 @@
                         "description": "Failed. Cat not found."
                     }
                 }
+            },
+            "delete": {
+                "summary": "Delete last todo with email",
+                "tags": [
+                    "Todos"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "description": "Delete last todo with email",
+                        "schema": {
+                            "email": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Deleted todo",
+                        "schema": {
+                            "email": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Failed"
+                    }
+                }
             }
         },
         "/adduser": {
