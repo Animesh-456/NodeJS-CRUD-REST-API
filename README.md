@@ -19,11 +19,13 @@ Now open your browser of choice on your local machine and navigate to `localhost
 ◆ Add a new User.<br>
 ◆ Fetch details of User.<br>
 ◆ Fetch the list of todos with a respective email.<br>
+◆ Delete todo with a respective email.<br>
 
 
 ### Glimpse of the endpoint
-<br></br>
-![Screenshot 2022-11-07 123120](https://user-images.githubusercontent.com/66238964/200245280-b50d69f6-4404-46fb-a85c-7cc14a911f08.png)
+<br></br>![Screenshot 2022-11-07 220101](https://user-images.githubusercontent.com/66238964/200363434-cc37eaa0-65cd-483d-b3f7-ebaf4e344913.png)
+
+
 
 ## Tools Used:
 
