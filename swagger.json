@@ -1,0 +1,168 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "TypeScript-NodeJS-CRUD-REST-API",
+        "description": "Create CRUD style API in NodeJs using TypeScript"
+    },
+    "servers": [
+        {
+            "url": "/",
+            "description": "HTTP"
+        }
+    ],
+    "tags": [
+        {
+            "name": "TODO",
+            "description": "API for TODO in the system"
+        }
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/users": {
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Get all users in system",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Failed. Cat not found."
+                    }
+                }
+            }
+        },
+        "/todo/{id}": {
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "description": "ID of the cat that we want to match",
+                    "type": "string"
+                }
+            ],
+            "get": {
+                "tags": [
+                    "Todo Description"
+                ],
+                "summary": "Todo with email",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Failed. Cat not found."
+                    }
+                }
+            }
+        },
+        "/adduser": {
+            "post": {
+                "tags": [
+                    "New User"
+                ],
+                "summary": "Create a new User in system",
+                "requestBody": {
+                    "description": "User Object",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "id": {
+                                    "type": "string"
+                                },
+                                "email": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "description": {
+                                    "type": "array"
+                                }
+                            }
+                        }
+                    }
+                },
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Failed."
+                    }
+                }
+            }
+        },
+        "/adddesc": {
+            "post": {
+                "tags": [
+                    "Add description"
+                ],
+                "summary": "Adding new todo in collection",
+                "requestBody": {
+                    "description": "todo object",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "email": {
+                                    "type": "string"
+                                },
+                                "description": {
+                                    "type": "description"
+                                }
+                            }
+                        }
+                    }
+                },
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Inserted!"
+                    },
+                    "404": {
+                        "description": "Failed to insert!"
+                    }
+                }
+            }
+        },
+        "definitions": {
+            "User": {
+                "type": "object",
+                "id": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "array"
+                }
+            },
+            "Users": {
+                "type": "array",
+                "$ref": "#/definitions/User"
+            }
+        }
+    }
+}
