@@ -14,6 +14,13 @@ To start the app (in dev environment) use `npm run dev`.
 
 Now open your browser of choice on your local machine and navigate to `localhost:3000/api-docs`
 
+### API endpoints implemented
+
+◆ Add a new User.<br>
+◆ Fetch details of User.<br>
+◆ Fetch the list of todos with a respective email.<br>
+
+
 ### Glimpse of the endpoint
 <br></br>
 ![Screenshot 2022-11-07 123120](https://user-images.githubusercontent.com/66238964/200245280-b50d69f6-4404-46fb-a85c-7cc14a911f08.png)
